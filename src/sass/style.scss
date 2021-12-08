@@ -1,0 +1,26 @@
+@import url('https://fonts.googleapis.com/css2?family=Play:wght@400;700&display=swap');
+
+@import 'base/mixin';
+@import 'base/variables';
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: 'Play', sans-serif;
+}
+body {
+    overflow-x: hidden;
+    list-style: none;
+}
+.container {
+    width: 1110px;
+    margin: 0 auto;
+}
+
+@import 'blocks/header';
+@import 'blocks/menu';
+@import 'blocks/main';
+@import 'blocks/history';

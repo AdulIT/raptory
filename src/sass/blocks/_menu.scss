@@ -1,0 +1,91 @@
+.hamburger {
+    width: 42px;
+    height: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    div {
+        width: 100%;
+        height: 2px;
+        background-color: $third-color;
+    }
+    // &.active {
+        
+    // }
+}
+
+.menu {
+    position: fixed;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100vh;
+    z-index: 10;
+    visibility: hidden;
+    opacity: 0;
+    transition: all .6s;
+    &.active {
+        left: 0;
+        visibility: visible;
+        opacity: 1;
+    }
+    &__block {
+        position: relative;
+        width: 100%;
+        background-color: $text-color;
+        height: 100%;
+        padding: 140px 0 0 40px;
+        transition: all .6s;
+        z-index: 10;
+    }
+    &__close {
+        position: absolute;
+        top: 25px;
+        right: 25px;
+        cursor: pointer;
+    }
+    &__list {
+        list-style-type: none;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    &__link {
+        font-weight: bold;
+        font-size: 24px;
+        line-height: 36px;
+        text-transform: uppercase;
+        margin-bottom: 15px;
+        // &:before {
+        //     content: '';
+        //     display: inline-block;
+        //     width: 15px;
+        //     height: 15px;
+        //     border: 1px solid $secondary-color;
+        //     border-radius: 50%;
+        //     margin-right: 20px;
+        //     transition: all .6s;
+        // }
+        // &:hover {
+        //     &:before {
+        //         background-color: $secondary-color;
+        //     }
+        // }
+        a {
+            text-decoration: none;
+            color: $secondary-color;
+        }
+    }
+    // &__overlay {
+    //     position: fixed;
+    //     top: 0;
+    //     left: 0;
+    //     width: 100%;
+    //     height: 100%;
+    //     background-color: #fff;
+    //     opacity: .75;
+    // }
+}

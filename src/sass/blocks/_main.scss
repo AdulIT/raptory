@@ -1,0 +1,16 @@
+.main {
+    padding-top: 300px;
+    height: 100vh;
+    background-color: $secondary-color;
+    // z-index: 10;
+    &__title {
+        font-size: 36px;
+        color: $text-color;
+    }
+    &__descr {
+        margin-top: 20px;
+        font-size: 20px;
+        color: $text-color;
+    }
+
+}
