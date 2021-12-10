@@ -1,16 +1,54 @@
 .main {
-    padding-top: 300px;
-    height: 100vh;
-    background-color: $secondary-color;
-    // z-index: 10;
-    &__title {
-        font-size: 36px;
-        color: $text-color;
+    position: relative;
+    padding-top: 20px;
+    height: calc(100vh - 70px);
+    &-slider {
+        position: relative;
+        &__img {
+            text-align: center;
+            img {
+                display: block;     
+                max-width: 100%;
+                margin: 0 auto;
+            }
+        }
+        &__title {
+            width: auto;
+            position: absolute;
+            top: 7%;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 2.3rem;
+            color: $text-color;
+        }
+        &__text {
+            position: absolute;
+            top: 90%;
+            left: 50%;
+            transform: translateX(-50%);
+            color: $text-color;
+            font-size: 1.5rem;
+        }
     }
-    &__descr {
-        margin-top: 20px;
-        font-size: 20px;
+    .slider-links {
+        position: absolute;
+        bottom: 0;
+        width: 90%;
+        height: 5vh;
+        display: flex;
+        justify-content: space-evenly;
+        background-color: transparent;
         color: $text-color;
+        list-style: none;
+        font-size: 1.2rem;
+        .swiper-pagination-bullet {
+            width: auto;
+            opacity: 0.2;
+            outline: none;
+            &-active {
+                color: $text-color;
+                opacity: 1;
+            }
+        }
     }
-
 }

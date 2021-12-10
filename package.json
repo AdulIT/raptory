@@ -11,18 +11,25 @@
   "devDependencies": {
     "browser-sync": "^2.27.7",
     "gulp": "^4.0.2",
+    "gulp-audiosprite": "^1.1.0",
     "gulp-autoprefixer": "^6.1.0",
     "gulp-clean-css": "^4.3.0",
     "gulp-cli": "^2.3.0",
     "gulp-htmlmin": "^5.0.1",
-    "gulp-imagemin": "^6.2.0",
     "gulp-rename": "^1.4.0",
-    "gulp-sass": "^4.1.1"
+    "gulp-sass": "^4.1.1",
+    "imagemin-jpegtran": "^7.0.0",
+    "imagemin-pngquant": "^9.0.2",
+    "pngquant-bin": "^7.0.2"
   },
   "browserslist": [
     "last 1 version",
     "> 1%",
     "maintained node versions",
     "not dead"
-  ]
+  ],
+  "type": "module",
+  "dependencies": {
+    "gulp-imagemin": "^8.0.0"
+  }
 }

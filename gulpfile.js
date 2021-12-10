@@ -1,11 +1,30 @@
-const gulp        = require('gulp');
-const browserSync = require('browser-sync');
-const sass        = require('gulp-sass');
-const cleanCSS = require('gulp-clean-css');
-const autoprefixer = require('gulp-autoprefixer');
-const rename = require("gulp-rename");
-const imagemin = require('gulp-imagemin');
-const htmlmin = require('gulp-htmlmin');
+// const gulp         = require('gulp');
+// const browserSync  = require('browser-sync');
+// const sass         = require('gulp-sass');
+// const cleanCSS     = require('gulp-clean-css');
+// const autoprefixer = require('gulp-autoprefixer');
+// const rename       = require("gulp-rename");
+// const imagemin     = require('gulp-imagemin');
+// const htmlmin      = require('gulp-htmlmin');
+import gulp from 'gulp';
+import browserSync from 'browser-sync';
+import sass from 'gulp-sass';
+import cleanCSS from 'gulp-clean-css';
+import autoprefixer from 'gulp-autoprefixer';
+import rename from 'gulp-rename';
+import imagemin from 'gulp-imagemin';
+import htmlmin from 'gulp-htmlmin';
+// (function() {
+//     var childProcess = require("child_process");
+//     var oldSpawn = childProcess.spawn;
+//     function mySpawn() {
+//         console.log('spawn called');
+//         console.log(arguments);
+//         var result = oldSpawn.apply(this, arguments);
+//         return result;
+//     }
+//     childProcess.spawn = mySpawn;
+// })();
 
 gulp.task('server', function() {
 
@@ -35,6 +54,7 @@ gulp.task('watch', function() {
     gulp.watch("src/fonts/**/*").on('all', gulp.parallel('fonts'));
     gulp.watch("src/icons/**/*").on('all', gulp.parallel('icons'));
     gulp.watch("src/img/**/*").on('all', gulp.parallel('images'));
+    gulp.watch("src/sounds/*.mp3").on('change', gulp.parallel('audio'));
 });
 
 gulp.task('html', function () {
@@ -68,4 +88,9 @@ gulp.task('images', function () {
         .pipe(browserSync.stream());
 });
 
-gulp.task('default', gulp.parallel('watch', 'server', 'styles', 'scripts', 'fonts', 'icons', 'html', 'images'));
+gulp.task('audio', function() {
+    return gulp.src('src/sounds/*.mp3')
+      .pipe(gulp.dest('dist/sounds'));
+  });
+
+gulp.task('default', gulp.parallel('watch', 'server', 'styles', 'scripts', 'fonts', 'icons', 'html', 'images', 'audio'));

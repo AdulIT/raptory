@@ -2,25 +2,66 @@
 
 @import 'base/mixin';
 @import 'base/variables';
-
+// Обнуление стилей
 *,
 *::before,
 *::after {
-    box-sizing: border-box;
     padding: 0;
     margin: 0;
-    font-family: 'Play', sans-serif;
+    border: 0;
+    box-sizing: border-box;
 }
-body {
-    overflow-x: hidden;
+a {
+    text-decoration: none;
+}
+ul,
+ol,
+li {
     list-style: none;
 }
+img {
+    vertical-align: top;
+}
+h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+    font-weight: inherit;
+    font-size: inherit;
+}
+html,
+body {
+    line-height: 1;
+    font-size: 14px;
+    overflow-x: hidden;
+    background-color: $secondary-color;
+    font-family: 'Play', sans-serif;
+    // &, * {
+    //     cursor: none;
+    // }
+}
+:root {
+    --swiper-theme-color: transparent;
+    --swiper-pagination-bullet-inactive-color: transparent;
+}
+
 .container {
     width: 1110px;
     margin: 0 auto;
 }
 
+// .cursor {
+//     position: fixed;
+//     background: #b82727;
+//     width: 20px;
+//     height: 20px;
+//     border-radius: 50%;
+//     margin: -10px 0 0 -10px;
+//     will-change: transform;
+//     pointer-events: none;
+//     z-index: 1000;
+// }
+
 @import 'blocks/header';
 @import 'blocks/menu';
 @import 'blocks/main';
 @import 'blocks/history';
+@import 'blocks/game';

@@ -15,7 +15,7 @@
         <div class="container">
             <nav class="nav">
                 <div class="header__logo">
-                    <img src="img/logo/raptory-logo.svg" alt="logo">
+                    <a href="./index.html"><img src="img/logo/raptory-logo.svg" alt="logo"></a>
                 </div>
                 <div class="header__search">
                     <div class="header__search-icon"></div>
@@ -46,38 +46,70 @@
                     <li class="menu__link"><a href="#">ИСТОРИЯ ЗАРОЖДЕНИЯ</a></li>
                     <li class="menu__link"><a href="#">БАНДЫ</a></li>
                     <li class="menu__link"><a href="#">ИЗВЕСТНЫЕ ЛИЧНОСТИ</a></li>
-                    <li class="menu__link"><a href="#">МИНИ-ИГРА</a></li>
+                    <li class="menu__link"><a href="./mini-game.html">МИНИ-ИГРА</a></li>
                 </ul>
             </nav>
         </div>
-        <!-- <div class="menu__overlay"></div> -->
     </div>
 
     <main class="main">
         <div class="container">
-            <div id="scene">
-                <h1 class="main__title">Raptory is about the history of rap!</h1>
-                <div class="main__descr">Scroll to go to the history of the origin</div>
-                <div class="main__link">
-                    <img src="img/Grandmaster_Flash_and_The_Furious_Five.jpg" alt="Grandmaster_Flash_and_The_Furious_Five">
+            <div class="main-slider swiper-container">
+                <div class="main-slider__wrapper swiper-wrapper">
+                    <!-- 1st SLIDE -->
+                    <div class="main-slider__slide swiper-slide">
+                        <div class="main-slider__img">
+                            <a href="#">
+                                <img src="img/birtth.png" alt="Birth of hip-hop">
+                            </a>
+                        </div>
+                        <h3 class="main-slider__title">История зарождения</h3>
+                        <div class="main-slider__text">1970</div>
+                    </div>
+                    <!-- 2nd SLIDE -->
+                    <div class="main-slider__slide swiper-slide">
+                        <div class="main-slider__img">
+                            <a href="#">
+                                <img src="img/wu-tang-clan.png" alt="Wu tang clan">
+                            </a>
+                        </div>
+                        <h3 class="main-slider__title">Группировки</h3>
+                        <div class="main-slider__text">1</div>
+                    </div>
+                    <!-- 3rd SLIDE -->
+                    <div class="main-slider__slide swiper-slide">
+                        <div class="main-slider__img">
+                            <a href="#">
+                                <img src="img/2pac.png" alt="2pac">
+                            </a>
+                        </div>
+                        <h3 class="main-slider__title">Известные личности</h3>
+                        <div class="main-slider__text">1</div>
+                    </div>
+                    <!-- 4th SLIDE -->
+                    <div class="main-slider__slide swiper-slide">
+                        <div class="main-slider__img">
+                            <a href="./mini-game.html">
+                                <img src="img/game.png" alt="mini-game">
+                            </a>
+                        </div>
+                        <h3 class="main-slider__title">Мини - игра</h3>
+                        <div class="main-slider__text">Простая игра с битами</div>
+                    </div>
                 </div>
+            </div>
+
+            <div>
+                <div class="slider-links"></div>
             </div>
         </div>
     </main>
 
-    <section class="history">
-        <div class="container">
-            
-        </div>
-    </section>
-    <section class="section">
-
-    </section>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/parallax/3.1.0/parallax.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.8.0/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.8.0/ScrollTrigger.min.js"></script>
-    <script src="js/gsap.js"></script>
     <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+    <script src="js/swiper-slider.js"></script>
     <script src="js/script.js"></script>
 </body>
 </html>

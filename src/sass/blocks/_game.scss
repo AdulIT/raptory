@@ -1,0 +1,33 @@
+.game {
+    min-height: calc(100vh - 70px);
+    &-keys {
+        height: calc(100vh - 70px);
+        display: grid;
+        grid-template: repeat(2, minmax(120px, auto))/repeat(5, minmax(120px, auto));
+        grid-auto-rows: minmax(120px, auto);
+        gap: 50px;
+        place-content: center center;
+        &__key {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            align-items: center;
+            // border: 2px solid $third-color;
+            box-shadow: -11px -11px 20px -11px rgba($third-color, .8);
+            kbd {
+                display: block;
+                font-size: 3rem;
+                color: $third-color;
+            }
+            span {
+                display: block;
+                font-size: 1.5rem;
+                color: $text-color;
+            }
+        }
+    }
+    .playing {
+        transform: scale(1.1);
+        box-shadow: -11px -11px 10px -11px rgba($third-color, .2);
+    }
+}
