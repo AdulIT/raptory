@@ -14,6 +14,7 @@
             align-items: center;
             // border: 2px solid $third-color;
             box-shadow: -11px -11px 20px -11px rgba($third-color, .8);
+            transition: all .7s;
             kbd {
                 display: block;
                 font-size: 3rem;

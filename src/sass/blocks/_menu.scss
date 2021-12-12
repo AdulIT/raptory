@@ -36,7 +36,7 @@
         width: 100%;
         background-color: $text-color;
         height: 100%;
-        padding: 140px 0 0 40px;
+        padding: 140px 0 0 100px;
         transition: all .6s;
         z-index: 10;
     }
@@ -47,7 +47,6 @@
         cursor: pointer;
     }
     &__list {
-        list-style-type: none;
         display: flex;
         flex-direction: column;
         justify-content: start;
@@ -56,33 +55,16 @@
     &__link {
         font-weight: bold;
         font-size: 3em;
-        line-height: 36px;
+        line-height: 1.5em;
         text-transform: uppercase;
         margin-bottom: 1.5em;
-        // &:before {
-        //     content: '';
-        //     display: inline-block;
-        //     width: 15px;
-        //     height: 15px;
-        //     border: 1px solid $secondary-color;
-        //     border-radius: 50%;
-        //     margin-right: 20px;
-        //     transition: all .6s;
-        // }
-        // &:hover {
-        //     &:before {
-        //         background-color: $secondary-color;
-        //     }
-        // }
         a {
             text-decoration: none;
             color: $secondary-color;
-            // &:hover {
-            //     &:before {
-            //         content: '';
-            //         w
-            //     }
-            // }
+            transition: all .3s;
+            &:hover {
+                color: $third-color;
+            }
         }
     }
 }

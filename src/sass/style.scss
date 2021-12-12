@@ -43,6 +43,12 @@ body {
     --swiper-pagination-bullet-inactive-color: transparent;
 }
 
+input::-webkit-search-decoration,
+input::-webkit-search-cancel-button,
+input::-webkit-search-results-button,
+input::-webkit-search-results-decoration { 
+    display: none;
+}
 .container {
     width: 1110px;
     margin: 0 auto;
@@ -64,4 +70,5 @@ body {
 @import 'blocks/menu';
 @import 'blocks/main';
 @import 'blocks/history';
+@import 'blocks/bands';
 @import 'blocks/game';

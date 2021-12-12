@@ -36,4 +36,5 @@ const swiper = new Swiper('.main-slider', {
     },
     touchRatio: 3,
     grabCursor: true,
+    loop: true,
 });
