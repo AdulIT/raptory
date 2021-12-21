@@ -31,4 +31,11 @@
         transform: scale(1.1);
         box-shadow: -11px -11px 10px -11px rgba($third-color, .2);
     }
+    svg {
+        position: absolute;
+        left: 50%;
+        bottom: 5%;
+        transform: translateX(-50%);
+        cursor: pointer;
+    }
 }

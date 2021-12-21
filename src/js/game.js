@@ -17,4 +17,8 @@ function removeTransition(e) {
 const keys = document.querySelectorAll('.game-keys__key');
 
 keys.forEach(key => key.addEventListener('transitionend', removeTransition));
-window.addEventListener('keydown', playSound);
+const launcFunction = window.addEventListener('keydown', playSound);
+
+// const playBtn = document.querySelector('svg');
+
+// playBtn.addEventListener('click', launcFunction);

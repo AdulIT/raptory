@@ -30,6 +30,7 @@
   ],
   "type": "module",
   "dependencies": {
+    "@barba/core": "^2.9.7",
     "gulp-imagemin": "^8.0.0"
   }
 }

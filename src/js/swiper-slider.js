@@ -1,3 +1,4 @@
+import Swiper from 'swiper';
 // const scene = document.getElementById('scene');
 // const parallax = new Parallax(scene);
 
@@ -12,7 +13,7 @@
 //     duration: 3
 // });
 
-const keys = [
+const keyz = [
     "История зарождения",
     "Группировки",
     "Известные личности",
@@ -31,7 +32,7 @@ const swiper = new Swiper('.main-slider', {
     pagination: {
         el: '.slider-links',
         renderBullet: function(index, className) {
-            return '<div class="' + className + '">' + keys[index] + '</div>';
+            return '<div class="' + className + '">' + keyz[index] + '</div>';
         },
     },
     touchRatio: 3,
