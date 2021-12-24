@@ -19,24 +19,54 @@ close.addEventListener('click', () => {
 });
 
 
-function delay(n) {
-    n = n || 2000;
-    return new Promise(done => {
-        setTimeout(() => {
-            done();
-        }, n);
+pageTransition = () => {
+    var tl = gsap.timeline();
+
+    tl.to('header', {
+        zIndex: 1
+    });
+
+    tl.to('main', {
+        zIndex: 1
+    });
+
+    tl.to('.page-transition', {
+        duration: 1,
+        height: "100%",
+        top: "0%"
+    });
+
+    tl.to('.page-transition', {
+        duration: .8,
+        height: "100%",
+        top: "100%",
+        delay: .3
+    });
+
+    tl.set('.page-transition', {
+        top: "-100%"
     });
 }
 
-barba.init({
-    sync: true,
-    transitions: [{
-        async leave(data) {
-            const done  = this.async();
 
-            pageTransition();
-            await delay(1500);
-            done();
-        }
-    }]
-});
+// function delay(n) {
+//     n = n || 2000;
+//     return new Promise(done => {
+//         setTimeout(() => {
+//             done();
+//         }, n);
+//     });
+// }
+
+// barba.init({
+//     sync: true,
+//     transitions: [{
+//         async leave(data) {
+//             const done  = this.async();
+
+//             pageTransition();
+//             await delay(1500);
+//             done();
+//         }
+//     }]
+// });

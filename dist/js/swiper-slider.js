@@ -1,4 +1,4 @@
-import Swiper from 'swiper';
+// import Swiper from 'swiper';
 // const scene = document.getElementById('scene');
 // const parallax = new Parallax(scene);
 
