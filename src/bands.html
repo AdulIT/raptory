@@ -5,7 +5,25 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Группировки</title>
-
+    <!-- FAVICON -->
+    <link rel="apple-touch-icon" sizes="57x57" href="icons/favicon/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="icons/favicon/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="icons/favicon/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="icons/favicon/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="icons/favicon/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="icons/favicon/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="icons/favicon/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="icons/favicon/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="icons/favicon/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="icons/favicon/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="icons/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="icons/favicon/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="icons/favicon/favicon-16x16.png">
+    <link rel="manifest" href="icons/favicon/manifest.json">
+    <meta name="msapplication-TileColor" content="#000000">
+    <meta name="msapplication-TileImage" content="icons/favicon/ms-icon-144x144.png">
+    <meta name="theme-color" content="#000000">
+    <!-- FONTS -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css"/>
@@ -50,7 +68,7 @@
             <nav>
                 <ul class="menu__list">
                     <li class="menu__link"><a href="./history.html">ИСТОРИЯ ЗАРОЖДЕНИЯ</a></li>
-                    <li class="menu__link"><a href="./bands.html">БАНДЫ</a></li>
+                    <li class="menu__link"><a href="./bands.html" id="active">БАНДЫ</a></li>
                     <li class="menu__link"><a href="./famous.html">ИЗВЕСТНЫЕ ЛИЧНОСТИ</a></li>
                     <li class="menu__link"><a href="./mini-game.html">МИНИ-ИГРА</a></li>
                 </ul>
@@ -59,10 +77,38 @@
     </div>
 
 
-    <main data-barba="container" class="history">
-            <div class="container">
+    <main data-barba="container" class="bands">
+        <div class="container">
+            <ul id="scene" class="bands__band">
+                <li>
+                    <div data-depth="0.60" class="bands__band-1">
+                        <img src="img/wutangc.jpg" alt="wu-tang-clan" class="bands__band-img hidden">
+                        <a href="wutang.html" class="bands__band-link">Wu Tang Clan</a>
+                    </div>
+                </li>
 
-            </div>
+                <li>
+                    <div data-depth="0.60" class="bands__band-2">
+                        <img src="img/nwa.jpg" alt="n.w.a" class="bands__band-img hidden">
+                        <a href="nwa.html" class="bands__band-link">N.W.A</a>
+                    </div>
+                </li>
+
+                <li>
+                    <div data-depth="0.60" class="bands__band-3">
+                        <img src="img/thesgg.jpg" alt="the-sugarhil-gang" class="bands__band-img hidden">
+                        <a href="thesugarhill.html" class="bands__band-link">The Sugarhill Gang</a>
+                    </div>
+                </li>
+
+                <li>
+                    <div data-depth="0.60" class="bands__band-4">
+                        <img src="img/run-dmc.jpg" alt="run-dmc" class="bands__band-img hidden">
+                        <a href="rundmc.html" class="bands__band-link">Run - DMC</a>
+                    </div>
+                </li>
+            </ul>
+        </div>
     </main>
 
 
@@ -73,6 +119,8 @@
     <script src="https://unpkg.com/@barba/core"></script>
     <script src="https://cdn.jsdelivr.net/npm/@barba/core"></script>
     <script src="js/swiper-slider.js"></script>
+    <script src="js/gsap.js"></script>
     <script src="js/script.js"></script>
+    <script src="js/parallax.js"></script>
 </body>
 </html>

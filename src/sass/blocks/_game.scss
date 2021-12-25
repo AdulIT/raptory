@@ -1,5 +1,6 @@
 .game {
     min-height: calc(100vh - 70px);
+    background-color: $secondary-color;
     &-keys {
         height: calc(100vh - 70px);
         display: grid;

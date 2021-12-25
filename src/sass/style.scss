@@ -32,11 +32,7 @@ body {
     line-height: 1;
     font-size: 14px;
     overflow-x: hidden;
-    background-color: $secondary-color;
     font-family: 'Play', sans-serif;
-    // &, * {
-    //     cursor: none;
-    // }
 }
 :root {
     --swiper-theme-color: transparent;
@@ -54,6 +50,9 @@ input::-webkit-search-results-decoration {
     margin: 0 auto;
 }
 
+#active {
+    color: $third-color;
+}
 // .cursor {
 //     position: fixed;
 //     background: #b82727;
