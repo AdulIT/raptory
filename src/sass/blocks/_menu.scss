@@ -11,9 +11,6 @@
         height: 2px;
         background-color: $third-color;
     }
-    // &.active {
-        
-    // }
 }
 
 .menu {
@@ -34,7 +31,7 @@
     &__block {
         position: relative;
         width: 100%;
-        background-color: $text-color;
+        background-color: $secondary-color;
         height: 100%;
         padding: 140px 0 0 100px;
         transition: all .6s;
@@ -59,11 +56,13 @@
         text-transform: uppercase;
         margin-bottom: 1.5em;
         a {
+            display: block;
             text-decoration: none;
-            color: $secondary-color;
+            color: $text-color;
             transition: all .3s;
             &:hover {
                 color: $third-color;
+                transform: translateX(15px);
             }
         }
     }

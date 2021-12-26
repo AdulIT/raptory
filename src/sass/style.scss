@@ -51,7 +51,9 @@ input::-webkit-search-results-decoration {
 }
 
 #active {
+    display: block;
     color: $third-color;
+    transform: translateX(15px);
 }
 // .cursor {
 //     position: fixed;
@@ -65,10 +67,19 @@ input::-webkit-search-results-decoration {
 //     z-index: 1000;
 // }
 
+@import 'blocks/title';
+@import 'blocks/img';
 @import 'blocks/header';
 @import 'blocks/menu';
 @import 'blocks/main';
 @import 'blocks/history';
 @import 'blocks/bands';
 @import 'blocks/game';
+@import 'blocks/famous';
 @import 'blocks/page-transition';
+// BANDS
+@import 'blocks/wtclan';
+@import 'blocks/nwa';
+@import 'blocks/thesh';
+@import 'blocks/rundmc';
+// FAMOUS

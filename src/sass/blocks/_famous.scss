@@ -1,8 +1,8 @@
-.bands {
+.famous {
     min-height: calc(100vh - 70px);
     background-color: $secondary-color;
     overflow: hidden;
-    &__band {
+    &__people {
         width: 100%;
         height: calc(100vh - 70px);
         li {
@@ -18,8 +18,7 @@
         }
         &-2 {
             position: absolute;
-            width: 100px;
-            height: 25px;
+            width: 160px;
             top: 45%;
             right: 5%;
             pointer-events: auto;
@@ -32,9 +31,9 @@
             pointer-events: auto;
         }
         &-4 {
-            width: 165px;
+            width: 180px;
             position: absolute;
-            bottom: 10%;
+            bottom: 30%;
             left: 40%;
             pointer-events: auto;
         }
@@ -47,6 +46,9 @@
             position: relative;
             color: $text-color;
             font-size: 2.5rem;
+            a {
+                width: 100%;
+            }
         }
     }
     .active {
