@@ -1,5 +1,3 @@
-// import barba from '@barba/core';
-
 const search = document.querySelector('#search'),
       clear = document.querySelector('.clear'),
       hamburger = document.querySelector('.hamburger'),
@@ -19,54 +17,31 @@ close.addEventListener('click', () => {
 });
 
 
-// pageTransition = () => {
-//     var tl = gsap.timeline();
+// SEARCH
 
-//     tl.to('header', {
-//         zIndex: 1
-//     });
+document.querySelector('#search').oninput = function() {
+    let val = this.value.trim();
+    let inputItems = document.querySelectorAll('.mycustom-scroll p');
+    if (val != '') {
+        inputItems.forEach(function(elem) {
+            if (elem.innerText.search(val) == -1) {
+                elem.classList.add('hide');
+                elem.innerHTML = elem.innerText;
+            } else {
+                elem.classList.remove('hide');
+                let str = elem.innerText;
+                elem.innerHTML = insertMark(str, elem.innerText.search(val), val.length);
+            }
+        });
+    }
+    else {
+        inputItems.forEach(function(elem) {
+            elem.classList.remove('hide');
+            elem.innerHTML = elem.innerText;
+        });
+    }
+}
 
-//     tl.to('main', {
-//         zIndex: 1
-//     });
-
-//     tl.to('.page-transition', {
-//         duration: 1,
-//         height: "100%",
-//         top: "0%"
-//     });
-
-//     tl.to('.page-transition', {
-//         duration: .8,
-//         height: "100%",
-//         top: "100%",
-//         delay: .3
-//     });
-
-//     tl.set('.page-transition', {
-//         top: "-100%"
-//     });
-// }
-
-
-// function delay(n) {
-//     n = n || 2000;
-//     return new Promise(done => {
-//         setTimeout(() => {
-//             done();
-//         }, n);
-//     });
-// }
-
-// barba.init({
-//     sync: true,
-//     transitions: [{
-//         async leave(data) {
-//             const done  = this.async();
-
-//             pageTransition();
-//             await delay(1500);
-//             done();
-//         }
-//     }]
-// });
+function insertMark(string,pos,len) {
+    return string.slice(0, pos) + '<mark>' + string.slice(pos, pos + len) + '</mark>' + string.slice(pos + len);
+}

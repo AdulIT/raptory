@@ -55,6 +55,15 @@ input::-webkit-search-results-decoration {
     color: $third-color;
     transform: translateX(15px);
 }
+
+
+.mycustom-scroll {
+    p {
+        .hide {
+            display: none;
+        }
+    }
+}
 // .cursor {
 //     position: fixed;
 //     background: #b82727;
@@ -77,6 +86,7 @@ input::-webkit-search-results-decoration {
 @import 'blocks/game';
 @import 'blocks/famous';
 @import 'blocks/page-transition';
+@import 'blocks/audio';
 // BANDS
 @import 'blocks/wtclan';
 @import 'blocks/nwa';

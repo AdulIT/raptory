@@ -1,0 +1,17 @@
+.control-btn {
+    position: fixed;
+    background: transparent;
+    width: 40px;
+    height: 40px;
+    bottom: 10%;
+    right: 10%;
+    z-index: 10;
+    cursor: pointer;
+    transition: all .2s;
+    img {
+        width: 100%;
+    }
+    .hidden {
+        display: none;
+    }
+}
