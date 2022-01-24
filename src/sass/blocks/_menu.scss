@@ -1,0 +1,69 @@
+.hamburger {
+    width: 42px;
+    height: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    div {
+        width: 100%;
+        height: 2px;
+        background-color: $third-color;
+    }
+}
+
+.menu {
+    position: fixed;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100vh;
+    z-index: 10;
+    visibility: hidden;
+    opacity: 0;
+    transition: all .6s;
+    &.active {
+        left: 0;
+        visibility: visible;
+        opacity: 1;
+    }
+    &__block {
+        position: relative;
+        width: 100%;
+        background-color: $secondary-color;
+        height: 100%;
+        padding: 140px 0 0 100px;
+        transition: all .6s;
+        z-index: 10;
+    }
+    &__close {
+        position: absolute;
+        top: 25px;
+        right: 25px;
+        cursor: pointer;
+    }
+    &__list {
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        align-items: start;
+    }
+    &__link {
+        font-weight: bold;
+        font-size: 3em;
+        line-height: 1.5em;
+        text-transform: uppercase;
+        margin-bottom: 1.5em;
+        a {
+            display: block;
+            text-decoration: none;
+            color: $text-color;
+            transition: all .3s;
+            &:hover {
+                color: $third-color;
+                transform: translateX(15px);
+            }
+        }
+    }
+}
