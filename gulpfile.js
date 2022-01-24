@@ -6,6 +6,15 @@ import autoprefixer from 'gulp-autoprefixer';
 import rename from 'gulp-rename';
 import imagemin from 'gulp-imagemin';
 import htmlmin from 'gulp-htmlmin';
+import deploy from 'gulp-gh-pages';
+
+/**
+ * Push build to gh-pages
+ */
+gulp.task('deploy', function () {
+  return gulp.src("./dist/**/*")
+    .pipe(deploy())
+});
 // (function() {
 //     var childProcess = require("child_process");
 //     var oldSpawn = childProcess.spawn;
