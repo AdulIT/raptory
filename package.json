@@ -23,6 +23,9 @@
     "imagemin-pngquant": "^9.0.2",
     "pngquant-bin": "^7.0.2"
   },
+  "resolutions": {
+    "gift": "^0.10.2"
+  },
   "browserslist": [
     "last 1 version",
     "> 1%",
